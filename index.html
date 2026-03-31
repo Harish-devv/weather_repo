@@ -8,12 +8,20 @@
 </head>
 <body>
 
-    <input id="city_name" type="text" placeholder="Enter City name">
-    <button id="search">Search</button>
+    <h1 class="header">Weather app</h1>
 
-    <h2 id="city"></h2>
-    <h3 id="temp"></h3>
-    <h3 id="des"></h3>
+    <div class="container">
+        <div class="input-container">
+            <input id="city_name" class = "input" type="text" placeholder="Enter City name">
+            <button id="search">Search</button>
+        </div>
+        <div class="output-container">
+            <h2 id="city"></h2>
+            <h3 id="temp"></h3>
+        </div>
+    </div>
+
+    <p id="msg"></p>
     <script src="script.js"></script>
 </body>
 </html>

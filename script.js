@@ -1,3 +1,5 @@
+let message = document.getElementById("msg")
+
 async function getWeather(){
     
     let city = document.getElementById("city_name");
@@ -5,13 +7,14 @@ async function getWeather(){
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${api_key}&units=metric`;
 
+    message.innerText = "Loading..."
     const res = await fetch(url);
     const data = await res.json();
 
     console.log(data);
 
     document.getElementById("city").innerText = "City: " + city.value;
-    document.getElementById("temp").innerText = "Temperature: " + data.main.temp; 
-
+    document.getElementById("temp").innerText = "Temperature: " + data.main.feels_like; 
+    message.innerText = "";
 }
 document.getElementById("search").onclick = () => {getWeather();}
